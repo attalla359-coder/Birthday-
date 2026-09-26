@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>لسه أول الطريق ❤️</title>
+<style>
+*{
+  box-sizing:border-box;
+  -webkit-tap-highlight-color:transparent;
+}
+html,body{
+  margin:0;
+  padding:0;
+  width:100%;
+  min-height:100%;
+}
+body{
+  font-family:"Segoe UI",Tahoma,Arial,sans-serif;
+  background:
+    radial-gradient(circle at top,#40204d 0%,#1b1025 45%,#09060d 100%);
+  color:#fff;
+  overflow-x:hidden;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 15% 20%,rgba(255,150,190,.12),transparent 25%),
+    radial-gradient(circle at 85% 75%,rgba(190,120,255,.10),transparent 25%);
+}
+.container{
+  width:min(680px,100%);
+  min-height:100vh;
+  margin:auto;
+  padding:24px 18px 40px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.screen{
+  width:100%;
+  display:none;
+  animation:fadeIn .7s ease;
+}
+.screen.active{
+  display:block;
+}
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform:translateY(18px) scale(.98);
+  }
+  to{
+    opacity:1;
+    transform:none;
+  }
+}
+.card{
+  position:relative;
+  padding:28px 20px;
+  border-radius:28px;
+  background:rgba(255,255,255,.075);
+  border:1px solid rgba(255,255,255,.13);
+  box-shadow:0 25px 70px rgba(0,0,0,.35);
+  backdrop-filter:blur(16px);
+}
+h1,h2{
+  margin:0 0 18px;
+  text-align:center;
+}
+h1{
+  font-size:32px;
+}
+h2{
+  font-size:26px;
+}
+p{
+  line-height:2;
+  font-size:17px;
+}
+.center{
+  text-align:center;
+}
+.heart{
+  font-size:70px;
+  animation:pulse 1.7s infinite;
+}
+@keyframes pulse{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.12)}
+}
+button{
+  border:0;
+  outline:0;
+  cursor:pointer;
+  color:#fff;
+  font-size:16px;
+  font-weight:700;
+  border-radius:18px;
+  padding:15px 22px;
+  margin-top:12px;
+  background:linear-gradient(135deg,#e95b9f,#9d5de7);
+  box-shadow:0 10px 25px rgba(180,70,170,.25);
+  transition:.2s;
+}
+button:active{
+  transform:scale(.96);
+}
+button.secondary{
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.12);
+}
+.full{
+  width:100%;
+}
+.small{
+  font-size:14px;
+  opacity:.75;
+}
+.progress{
+  position:fixed;
+  top:0;
+  left:0;
+  height:4px;
+  width:0%;
+  background:linear-gradient(90deg,#ff7eb3,#c58aff);
+  z-index:99;
+  transition:.4s;
+}
+/* صندوق الهدايا */
+.gift-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+  margin-top:22px;
+}
+.gift{
+  min-height:145px;
+  padding:18px 10px;
+  border-radius:23px;
+  background:linear-gradient(
+    145deg,
+    rgba(255,255,255,.13),
+    rgba(255,255,255,.045)
+  );
+  border:1px solid rgba(255,255,255,.12);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  cursor:pointer;
+  transition:.25s;
+}
+.gift:hover{
+  transform:translateY(-5px);
+}
+.gift.opened{
+  opacity:.55;
+}
+.gift-icon{
+  font-size:48px;
+  margin-bottom:8px;
+}
+/* الرسائل */
+.message{
+  background:rgba(0,0,0,.14);
+  padding:18px;
+  border-radius:20px;
+  margin:15px 0;
+}
+.message p{
+  margin:0;
+}
+.reveal{
+  display:none;
+  animation:fadeIn .5s ease;
+}
+.reveal.show{
+  display:block;
+}
+/* الميم */
+.meme{
+  margin:20px auto;
+  max-width:460px;
+  border-radius:25px;
+  padding:28px 18px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.13),
+      rgba(255,255,255,.04)
+    );
+  border:1px solid rgba(255,255,255,.14);
+  text-align:center;
+  box-shadow:0 15px 40px rgba(0,0,0,.25);
+}
+.meme-top{
+  font-size:18px;
+  font-weight:700;
+  line-height:1.8;
+}
+.meme-face{
+  font-size:75px;
+  margin:15px 0;
+}
+.meme-bottom{
+  font-size:20px;
+  font-weight:800;
+  line-height:1.7;
+}
+/* اختيار */
+.choice-grid{
+  display:grid;
+  gap:12px;
+  margin-top:20px;
+}
+.choice{
+  width:100%;
+  text-align:right;
+  background:rgba(255,255,255,.08);
+}
+.choice-result{
+  margin-top:18px;
+  padding:17px;
+  border-radius:18px;
+  background:rgba(255,105,170,.09);
+  border:1px solid rgba(255,255,255,.1);
+  display:none;
+}
+.choice-result.show{
+  display:block;
+  animation:fadeIn .4s ease;
+}
+/* الكلمات */
+.word-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+  margin-top:20px;
+}
+.word{
+  padding:20px 10px;
+  border-radius:20px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.1);
+  text-align:center;
+  cursor:pointer;
+  font-size:19px;
+  font-weight:800;
+}
+.word-content{
+  display:none;
+  margin-top:9px;
+  font-size:14px;
+  line-height:1.8;
+  font-weight:400;
+  opacity:.85;
+}
+.word.open .word-content{
+  display:block;
+}
+/* النهاية */
+.big-message{
+  font-size:18px;
+  line-height:2.1;
+}
+.hidden{
+  display:none!important;
+}
+.footer-heart{
+  text-align:center;
+  font-size:42px;
+  margin-top:20px;
+}
+/* نجوم */
+.star{
+  position:fixed;
+  pointer-events:none;
+  animation:fall linear forwards;
+  opacity:.8;
+  z-index:0;
+}
+@keyframes fall{
+  from{
+    transform:translateY(-30px) rotate(0);
+    opacity:0;
+  }
+  15%{
+    opacity:.8
+  }
+  to{
+    transform:translateY(110vh) rotate(360deg);
+    opacity:0;
+  }
+}
+@media(max-width:480px){
+  .container{
+    padding:18px 12px 30px;
+  }
+  .card{
+    padding:24px 15px;
+    border-radius:24px;
+  }
+  h1{
+    font-size:27px;
+  }
+  h2{
+    font-size:23px;
+  }
+  p{
+    font-size:16px;
+  }
+  .gift{
+    min-height:135px;
+  }
+  .gift-icon{
+    font-size:42px;
+  }
+  .word-grid{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="container">
+<!-- =========================
+     1 — البداية
+========================= -->
+<section class="screen active" id="s1">
+  <div class="card center">
+    <div class="heart">❤️</div>
+    <h1>حاجة صغيرة ليكي</h1>
+    <p>
+      يمكن دي مش أغلى هدية في الدنيا...
+      <br>
+      بس فيها شوية حاجات من قلبي.
+    </p>
+    <p>
+      وعلشان كده...
+      <br>
+      عايزك تكملي للآخر.
+    </p>
+    <button class="full" onclick="next(2)">
+      ✨ نبدأ؟
+    </button>
+  </div>
+</section>
+<!-- =========================
+     2 — صندوق الهدايا
+========================= -->
+<section class="screen" id="s2">
+  <div class="card">
+    <h2>🎁 صندوق الهدايا</h2>
+    <p class="center">
+      قدامك 5 صناديق...
+      <br>
+      وكل صندوق مخبي حاجة مختلفة ❤️
+    </p>
+    <div class="gift-grid">
+      <div class="gift" onclick="openGift(this,'g1')">
+        <div class="gift-icon">🎁</div>
+        <b>صندوق الرسالة</b>
+      </div>
+      <div class="gift" onclick="openGift(this,'g2')">
+        <div class="gift-icon">📸</div>
+        <b>صندوق الصورة</b>
+      </div>
+      <div class="gift" onclick="openGift(this,'g3')">
+        <div class="gift-icon">🎵</div>
+        <b>صندوق الأغنية</b>
+      </div>
+      <div class="gift" onclick="openGift(this,'g4')">
+        <div class="gift-icon">😂</div>
+        <b>صندوق الموقف</b>
+      </div>
+      <div class="gift" onclick="openGift(this,'g5')">
+        <div class="gift-icon">❤️</div>
+        <b>الصندوق الأخير</b>
+      </div>
+    </div>
+    <!-- الرسالة -->
+    <div id="g1" class="reveal message">
+      <p>
+        يمكن مش دايمًا بعرف أقول الكلام الصح في وقته،
+        وممكن ساعات أسكت وأنا جوايا كلام كتير نفسي أقولهولك...
+        <br><br>
+        بس فيه حاجة واحدة نفسي تفضلي عارفاها:
+        <br><br>
+        <b>إنتِ مش لوحدك. ❤️</b>
+        <br><br>
+        في الأيام اللي تحسي فيها إن الدنيا تقيلة،
+        وإنك مش قادرة تعملي حاجة،
+        أو حتى مش عارفة تشرحي إيه اللي مضايقك...
+        مش لازم تشرحي.
+        <br>
+        ومش لازم تبقي قوية طول الوقت.
+        <br><br>
+        لو يوم تعبتي، ارتاحي.
+        <br>
+        لو يوم عيطتي، عيطي.
+        <br>
+        لو حسيتي إنك مش قادرة، مفيش أي مشكلة...
+        خدي وقتك.
+        <br><br>
+        وأنا أتمنى أكون الشخص اللي تقدري ترجعي له
+        من غير ما تفكري كتير،
+        من غير تبرير،
+        ومن غير خوف من الحكم عليكي.
+        <br><br>
+        يمكن مقدرش أحل كل حاجة،
+        وممكن مقدرش أشيل عنك كل حاجة،
+        بس أقدر أكون جنبك،
+        أسمعك،
+        وأفكرك إنك أقوى مما تتخيلي.
+        <br><br>
+        وجودي جنبك مش مشروط إنك تكوني مبسوطة طول الوقت...
+        <br><br>
+        أنا عايز أكون موجود في الأيام الحلوة،
+        وفي الأيام اللي محتاجة سند أكتر.
+        <br><br>
+        <b>
+        مش لازم تواجهي كل حاجة لوحدك.
+        ❤️
+        </b>
+      </p>
+    </div>
+    <!-- الصورة / الميم -->
+    <div id="g2" class="reveal">
+      <div class="meme">
+        <div class="meme-top">
+          📸
+          <br><br>
+          المفروض تبقى صورة لينا...
+        </div>
+        <div class="meme-face">
+          😑
+        </div>
+        <div class="meme-bottom">
+          بس عيب على فكرة الكلام ده
+          <br>
+          واتلمي 😂❤️
+        </div>
+      </div>
+      <p class="center">
+        الصور لينا دلوقتي ممنوعة...
+        <br>
+        <b>
+        خليكي مؤدبة بقى 😑😂❤️
+        </b>
+      </p>
+    </div>
+    <!-- الأغنية -->
+    <div id="g3" class="reveal message">
+      <h2>🎵 أغنية ليكي</h2>
+      <p class="center">
+        مش هشرح ليه اخترت الأغنية دي...
+        <br>
+        اسمعيها بس بهدوء،
+        وسيبيها تقول اللي أنا مش عارف أقوله. ❤️
+      </p>
+      <button
+        class="full"
+        onclick="window.open('https://youtu.be/PRo3gl6u7FI?si=mls6JriJPgX5d9WQ','_blank')"
+      >
+        ▶️ اسمعي الأغنية
+      </button>
+      <p class="small center">
+        🎵 الأغنية الخاصة بالمفاجأة
+      </p>
+    </div>
+    <!-- الموقف -->
+    <div id="g4" class="reveal message">
+      <p>
+        في حاجة يمكن أنا مش بعرف أقولها
+        بالشكل الكافي...
+        <br><br>
+        <b>إنتِ وقفتي معايا كتير.</b>
+        <br><br>
+        في حاجات يمكن بالنسبة لي كانت كبيرة،
+        وإنتِ كنتِ موجودة فيها من غير ما أطلب،
+        ومن غير ما تستني مقابل.
+        <br><br>
+        وساعات لما بفكر:
+        <br>
+        «طب أنا هردلها كل ده إزاي؟»
+        <br><br>
+        بلاقي نفسي مش عارف أصلًا.
+        <br><br>
+        لأن المعروف اللي بيتعمل من القلب
+        مش بيتقاس بحاجة قدامه.
+        <br><br>
+        فلو في يوم حسيتِ إني مقصر،
+        أو إني معرفتش أقولك قد إيه أنا مقدّر وقفتك معايا...
+        <br><br>
+        <b>فده مش معناه إني نسيت.</b>
+        <br><br>
+        بالعكس، أنا فاكر.
+        <br><br>
+        وفاكر كل مرة كنتِ فيها سند،
+        وكل مرة حاولتي تخففي عني،
+        وكل مرة وجودك فرق معايا
+        حتى لو إنتِ نفسك معندكيش فكرة قد إيه فرق.
+        <br><br>
+        أنا يمكن معرفش أردلك الجميل كله...
+        <br><br>
+        بس أوعدك إني مش هتعامل مع وقفتك جنبي
+        كأنها حاجة عادية.
+        <br><br>
+        <b>❤️</b>
+      </p>
+    </div>
+    <!-- الرسالة الأساسية -->
+    <div id="g5" class="reveal message">
+      <h2>❤️ الرسالة الأساسية</h2>
+      <p class="big-message">
+        <b>
+        إلى الشخص اللي يمكن ميعرفش قد إيه وجوده بيفرق...
+        ❤️
+        </b>
+        <br><br>
+        أنا مش عايز أقولك كلام كبير
+        لمجرد إن النهارده مناسبة حلوة.
+        <br><br>
+        أنا عايز أقولك حاجة أبسط وأصدق:
+        <br><br>
+        <b>أنا ممتن إنك موجودة في حياتي.</b>
+        <br><br>
+        ممتن لكل مرة كنتِ فيها سند من غير ما أطلب،
+        ولكل مرة حسيتِ بيا حتى وأنا مش عارف أتكلم،
+        ولكل مرة حاولتي تخلي حاجة صعبة تعدي بشكل أخف.
+        <br><br>
+        ويمكن أجمل حاجة في وجودك
+        إنك مش بس بتكوني موجودة وقت الضحك
+        واللحظات الحلوة...
+        <br><br>
+        إنتِ من الناس اللي وجودهم بيبان أكتر وقت التعب.
+        <br><br>
+        وعشان كده،
+        أتمنى مهما الأيام اتغيرت،
+        ومهما الحياة خدتنا في اتجاهات مختلفة،
+        تفضلي فاكرة إن فيه شخص بيتمنى لك الخير من قلبه،
+        وعايز يشوفك مبسوطة،
+        مطمنة،
+        وواصلة لكل حاجة نفسك فيها.
+        <br><br>
+        ولو في يوم الدنيا ضاقت عليكي،
+        افتكري إنك مش مطالبة تكوني قوية طول الوقت.
+        <br><br>
+        خدي نفس...
+        <br>
+        اهدي...
+        <br>
+        وابدئي من جديد.
+        <br><br>
+        ولو احتجتي حد يسمعك، هتلاقيني.
+        <br>
+        ولو احتجتي حد يشجعك، هتلاقيني.
+        <br>
+        ولو احتجتي حد يفكرك إنك تقدري،
+        <b>هفكرك لحد ما تصدقيها بنفسك.</b>
+        <br><br>
+        مش عارف المستقبل هيحط لنا إيه،
+        ومش عايز أوعدك بوعود أكبر من قدرتي...
+        <br><br>
+        لكن أقدر أوعدك بحاجة واحدة:
+        <br><br>
+        <b>
+        هفضل مقدّر وجودك،
+        ومقدر كل حاجة حلوة عملتيها معايا،
+        ومش هعتبرها أبدًا حاجة عادية.
+        </b>
+        <br><br>
+        يمكن الهدية دي صغيرة...
+        <br><br>
+        والكلام مهما كان حلو
+        مش هيقدر يرد كل حاجة عملتيها.
+        <br><br>
+        بس أتمنى لما تقري الكلام ده،
+        تبتسمي وتعرفي إنك:
+        <br><br>
+        <b>
+        شخص مهم جدًا...
+        وإن وجودك له قيمة. ❤️
+        </b>
+        <br><br>
+        وكل سنة وإنتِ طيبة...
+        <br>
+        وكل سنة وإنتِ أقرب لكل حاجة بتتمنيها...
+        <br>
+        وكل سنة وضحكتك موجودة...
+        <br><br>
+        <b>
+        وعقبال سنين كتير جاية
+        تكون أهدى،
+        وأجمل،
+        وأحن عليكي. ❤️
+        </b>
+        <br><br>
+        <b>
+        ولو كنتِ فاكرة إن الصندوق ده هو النهاية...
+        </b>
+        <br><br>
+        <b>
+        فـ لأ...
+        </b>
+        <br><br>
+        <b>
+        ده لسه أول الطريق. ✨❤️
+        </b>
+      </p>
+      <button class="full" onclick="next(3)">
+        ✨ كمّلي المفاجآت
+      </button>
+    </div>
+  </div>
+</section>
+<!-- =========================
+     3 — اختيار
+========================= -->
+<section class="screen" id="s3">
+  <div class="card">
+    <h2>🎀 المفاجأة السادسة</h2>
+    <p class="center">
+      اختاري واحدة...
+      <br>
+      بس خلي بالك،
+      كل واحدة مخبية حاجة مختلفة ❤️
+    </p>
+    <div class="choice-grid">
+      <button class="choice" onclick="choice(1)">
+        💗 كلمة من قلبي
+      </button>
+      <button class="choice" onclick="choice(2)">
+        🌷 حاجة أتمنى أشوفها فيكي
+      </button>
+      <button class="choice" onclick="choice(3)">
+        💌 رسالة مخبية
+      </button>
+    </div>
+    <div id="choiceResult" class="choice-result"></div>
+    <button
+      id="afterChoice"
+      class="full hidden"
+      onclick="next(4)"
+    >
+      🌙 المفاجأة اللي بعدها
+    </button>
+  </div>
+</section>
+<!-- =========================
+     4 — الدعم
+========================= -->
+<section class="screen" id="s4">
+  <div class="card">
+    <h2>🌙 لو يومك مش أحسن حاجة</h2>
+    <p class="center">
+      متكمليش بسرعة...
+      <br>
+      خدي نفس الأول. ❤️
+    </p>
+    <div class="message">
+      <p>
+        مش لازم كل حاجة تتحل النهارده.
+        <br><br>
+        مش لازم تكوني قوية طول الوقت.
+        <br><br>
+        مش لازم تبرري تعبك.
+        <br><br>
+        ومش لازم تواجهي كل حاجة لوحدك.
+        <br><br>
+        <b>
+        بكرة فرصة جديدة.
+        </b>
+        <br><br>
+        وأنا أتمنى أشوفك فيه مبتسمة. ❤️
+      </p>
+    </div>
+    <button class="full" onclick="next(5)">
+      😂 عندنا حاجة تضحكك
+    </button>
+  </div>
+</section>
+<!-- =========================
+     5 — اختبار الضحك
+========================= -->
+<section class="screen" id="s5">
+  <div class="card">
+    <h2>😂 اختبار الضحك</h2>
+    <p class="center">
+      سؤال مهم جدًا...
+      <br>
+      ركزي 😂
+    </p>
+    <div class="message">
+      <p>
+        مين فينا ممكن يقول:
+        <br><br>
+        <b>
+        "أنا هنام بدري."
+        </b>
+        <br><br>
+        وبعدها يفضل صاحي ساعتين؟ 😂
+      </p>
+    </div>
+    <div class="choice-grid">
+      <button class="choice"
+        onclick="funny('أنا طبعًا 😌')">
+        أنا طبعًا 😌
+      </button>
+      <button class="choice"
+        onclick="funny('إنتِ 😂')">
+        إنتِ 😂
+      </button>
+      <button class="choice"
+        onclick="funny('إحنا الاتنين 😂')">
+        إحنا الاتنين ومحدش فينا يعترف 😂
+      </button>
+    </div>
+    <div id="funnyResult" class="choice-result"></div>
+    <button
+      id="funnyNext"
+      class="full hidden"
+      onclick="next(6)"
+    >
+      🫶 نكمل؟
+    </button>
+  </div>
+</section>
+<!-- =========================
+     6 — كلمات
+========================= -->
+<section class="screen" id="s6">
+  <div class="card">
+    <h2>🫶 حاجات يمكن مش عارفة قيمتها</h2>
+    <p class="center">
+      اضغطي على كل كلمة...
+    </p>
+    <div class="word-grid">
+      <div class="word" onclick="toggleWord(this)">
+        ضحكتك
+        <div class="word-content">
+          يمكن بالنسبة ليكي عادية...
+          بس بالنسبة لحد تاني
+          ممكن تكون أحلى حاجة في يومه. ❤️
+        </div>
+      </div>
+      <div class="word" onclick="toggleWord(this)">
+        طيبتك
+        <div class="word-content">
+          متخليش الدنيا تقنعك إن الطيبة ضعف.
+        </div>
+      </div>
+      <div class="word" onclick="toggleWord(this)">
+        وجودك
+        <div class="word-content">
+          أحيانًا مجرد وجود شخص معين
+          بيخلي الدنيا أخف شوية.
+        </div>
+      </div>
+      <div class="word" onclick="toggleWord(this)">
+        وقفتك
+        <div class="word-content">
+          أنا فاكرها...
+          حتى لو مش بعرف أقول ده كل مرة.
+        </div>
+      </div>
+      <div class="word" onclick="toggleWord(this)">
+        قلبك
+        <div class="word-content">
+          حافظي عليه،
+          لأنه يستاهل يتعامل معاه حد يقدره. ❤️
+        </div>
+      </div>
+    </div>
+    <button class="full" onclick="next(7)">
+      🌟 فيه حاجة أخيرة...
+    </button>
+  </div>
+</section>
+<!-- =========================
+     7 — النهاية المزيفة
+========================= -->
+<section class="screen" id="s7">
+  <div class="card center">
+    <div class="heart">
+      🎉
+    </div>
+    <h2>مبروك!</h2>
+    <p>
+      وصلتي لنهاية المفاجآت.
+    </p>
+    <button class="full" onclick="fakeEnd()">
+      ❤️ اضغطي هنا للنهاية
+    </button>
+  </div>
+</section>
+<!-- =========================
+     8 — استني
+========================= -->
+<section class="screen" id="s8">
+  <div class="card center">
+    <h2>
+      استني 😂
+    </h2>
+    <p>
+      افتكرتي بجد إني هسيبك تمشي كده؟
+    </p>
+    <div class="heart">
+      😂❤️
+    </div>
+    <p>
+      فيه حاجة واحدة لسه عايز أقولهالك...
+    </p>
+    <button class="full" onclick="next(9)">
+      💌 افتحيها
+    </button>
+  </div>
+</section>
+<!-- =========================
+     9 — آخر رسالة
+========================= -->
+<section class="screen" id="s9">
+  <div class="card">
+    <h2>
+      ❤️ آخر رسالة
+    </h2>
+    <div class="message big-message">
+      <p>
+        مش كل الهدايا بتتحط في صندوق.
+        <br><br>
+        فيه هدايا بتكون شخص دخل حياتك
+        في الوقت المناسب...
+        <br><br>
+        كلمة اتقالت في وقت كنت محتاج تسمعها...
+        <br><br>
+        موقف حد وقف فيه جنبك...
+        <br><br>
+        أو مجرد وجود شخص
+        يخلي الدنيا أهون شوية.
+        <br><br>
+        وأنا بالنسبة لي،
+        وجودك من الحاجات اللي تستاهل تتشكر عليها. ❤️
+        <br><br>
+        فممكن اللعبة تخلص هنا...
+        <br><br>
+        <b>
+        بس المفاجآت الحقيقية مش لازم تخلص.
+        </b>
+        <br><br>
+        لأن أجمل الحاجات لسه ممكن تحصل.
+        <br><br>
+        <b>
+        وده فعلًا...
+        <br>
+        لسه أول الطريق. ✨❤️
+        </b>
+      </p>
+    </div>
+    <button class="full" onclick="next(10)">
+      ✨ آخر حاجة
+    </button>
+  </div>
+</section>
+<!-- =========================
+     10 — الختام
+========================= -->
+<section class="screen" id="s10">
+  <div class="card center">
+    <div class="heart">
+      ❤️
+    </div>
+    <h1>
+      كل سنة وإنتِ طيبة
+    </h1>
+    <p class="big-message">
+      يا أجمل مفاجأة...
+      <br><br>
+      أتمنى السنة الجديدة من عمرك
+      تكون أهدى على قلبك،
+      وأجمل من اللي فات،
+      ومليانة حاجات تفرحك.
+      <br><br>
+      أتمنى تفضلي دايمًا
+      شايفة نفسك بعين حلوة،
+      وعارفة قيمتك،
+      ومؤمنة إنك تستاهلي الخير.
+      <br><br>
+      <b>
+      وعقبال سنين كتير جاية...
+      ❤️
+      </b>
+      <br><br>
+      وربنا يكتبلك فيها
+      كل حاجة نفسك فيها
+      ويبعد عنك كل حاجة توجع قلبك.
+      <br><br>
+      <b>
+      Happy Birthday ❤️
+      </b>
+    </p>
+    <div class="footer-heart">
+      ✨ ❤️ ✨
+    </div>
+  </div>
+</section>
+</div>
+<script>
+let current = 1;
+const totalScreens = 10;
+function updateProgress(){
+  const percent =
+    ((current - 1) / (totalScreens - 1)) * 100;
+  document.getElementById("progress").style.width =
+    percent + "%";
+}
+function showScreen(number){
+  document.querySelectorAll(".screen")
+    .forEach(screen => {
+      screen.classList.remove("active");
+    });
+  const target =
+    document.getElementById("s" + number);
+  if(target){
+    target.classList.add("active");
+    current = number;
+    updateProgress();
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    });
+  }
+}
+function next(number){
+  showScreen(number);
+  createStars(5);
+}
+function openGift(element,id){
+  element.classList.add("opened");
+  const box =
+    document.getElementById(id);
+  box.classList.toggle("show");
+  createStars(3);
+}
+function choice(number){
+  const result =
+    document.getElementById("choiceResult");
+  const messages = {
+    1:
+    "كلمة من قلبي: وجودك مش حاجة عادية عندي. يمكن مش بقولها كل مرة، بس أنا مقدّر وجودك أكتر مما تتخيلي. ❤️",
+    2:
+    "أتمنى أشوفك دايمًا مرتاحة ومطمنة، واثقة في نفسك، ومش بتقللي أبدًا من قيمة الحاجات الحلوة اللي فيكي. 🌷",
+    3:
+    "الرسالة المخبية: لو الدنيا في يوم خلتك تشكي في نفسك، افتكري إن فيه شخص شايف فيكي حاجات جميلة يمكن إنتِ نفسك مش واخدة بالك منها. 💌"
+  };
+  result.innerHTML =
+    messages[number];
+  result.classList.add("show");
+  document.getElementById("afterChoice")
+    .classList.remove("hidden");
+}
+function funny(answer){
+  const result =
+    document.getElementById("funnyResult");
+  let message = "";
+  if(answer === "أنا طبعًا 😌"){
+    message =
+      "اختيار منطقي جدًا... أنا كنت مستني الإجابة دي أصلًا 😂";
+  }
+  else if(answer === "إنتِ 😂"){
+    message =
+      "تم تسجيل الإجابة... بس هنعتبرها اتهامًا يحتاج تحقيق 😂";
+  }
+  else{
+    message =
+      "أهو ده الكلام العاقل 😂 إحنا الاتنين محتاجين نراجع مواعيد نومنا.";
+  }
+  result.innerHTML =
+    message;
+  result.classList.add("show");
+  document.getElementById("funnyNext")
+    .classList.remove("hidden");
+}
+function toggleWord(element){
+  element.classList.toggle("open");
+}
+function fakeEnd(){
+  showScreen(8);
+  createStars(12);
+}
+function createStars(amount){
+  const symbols =
+    ["✨","❤️","⭐","💗"];
+  for(let i=0;i<amount;i++){
+    const star =
+      document.createElement("div");
+    star.className = "star";
+    star.innerHTML =
+      symbols[
+        Math.floor(
+          Math.random()*symbols.length
+        )
+      ];
+    star.style.left =
+      Math.random()*100 + "vw";
+    star.style.fontSize =
+      (12 + Math.random()*16) + "px";
+    star.style.animationDuration =
+      (3 + Math.random()*4) + "s";
+    document.body.appendChild(star);
+    setTimeout(() => {
+      star.remove();
+    },7000);
+  }
+}
+updateProgress();
+createStars(8);
+</script>
+</body>
+</html>
